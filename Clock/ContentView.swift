@@ -10,8 +10,16 @@ import CoreData
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-            .font(.largeTitle)
+        VStack {
+            VStack{
+                Text("Hello, World!")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.red)
+            }
+            Button(action: {}) {
+                Text("Button!!")
+            }
+        }
     }
 //    @Environment(\.managedObjectContext) private var viewContext
 //
