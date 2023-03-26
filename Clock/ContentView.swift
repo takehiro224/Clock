@@ -9,15 +9,25 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    /*
+     -「some」Viewプロトコルを採用した何らかの型を意味
+     - someが付けられた型はOpaque Return Type
+     - 戻り値を抽象的な型にする
+     */
     var body: some View {
-        VStack {
+        VStack(spacing: 80) {
             VStack{
                 Text("Hello, World!")
                     .font(.largeTitle)
                     .foregroundColor(Color.red)
             }
             Button(action: {}) {
-                Text("Button!!")
+                Text("Tap!!")
+                    .font(.footnote)
+                    .fontWeight(.thin)
+                    .foregroundColor(Color.black)
+                    .frame(width: 70, height: 20)
+                    .border(Color.gray)
             }
         }
     }
